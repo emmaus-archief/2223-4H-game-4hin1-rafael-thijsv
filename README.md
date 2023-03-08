@@ -21,3 +21,10 @@ https://emmauscollege.github.io/informatica/game/
 stappenplan,
 
 achtergrond veranderd
+
+vorm veranderd
+
+volgende stap is de weg designen
+en de auto's designen
+
+auto's en weg opgezocht op internet
