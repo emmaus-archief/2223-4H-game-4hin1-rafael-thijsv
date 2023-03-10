@@ -27,4 +27,19 @@ vorm veranderd
 volgende stap is de weg designen
 en de auto's designen
 
-auto's en weg opgezocht op internet
+auto's opzoeken op internet
+
+achtergrond opzoeken op internet
+
+achtergrond toevoegen in game
+
+auto's toevoegen in game
+
+auto's bewegen
+
+verkeer toevoegen
+
+botsing detectie toevoegen
+
+
+
