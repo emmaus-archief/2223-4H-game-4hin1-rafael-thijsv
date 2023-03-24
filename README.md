@@ -5,7 +5,7 @@ Deze repo is onderdeel van het vak informatica op het Emmauscollege Rotterdam.
 ## Documentatie
 - Khan Academy cursus JavaScript met p5js library <br>
 https://www.khanacademy.org/computing/computer-programming/programming
-- p5js reference <br>
+- p5js reference <br>,L
 https://p5js.org/reference/
 - informatie van Emmauscollege over game opdracht <br>
 https://emmauscollege.github.io/informatica/game/
