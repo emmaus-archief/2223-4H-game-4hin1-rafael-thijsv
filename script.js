@@ -87,7 +87,7 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-
+background image: weg.jpg;
   // vijand
 
   // kogel
@@ -125,7 +125,9 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('black');
+
+body {
+  background-image: url("https://img.freepik.com/premium-vector/lege-rechte-weg-met-markering-horizontaal-snelweg-bovenaanzicht-naadloze-rijbaan-sjabloon_254622-561.jpg?w=2000");
 }
 
 /**
