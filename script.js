@@ -1,3 +1,9 @@
+
+
+function setup () {
+  image (img, 0, 0);
+}
+
 /* Game opdracht
    Informatica - Emmauscollege Rotterdam
    Template voor een game in JavaScript met de p5 library
@@ -27,6 +33,7 @@ const KEY_RIGHT = 68;    //D
 var spelerX = 200        // x-positie van speler
 var spelerY = 360        // y-positie van speler
 
+var img; //plaatje
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -89,6 +96,10 @@ var tekenAlles = function() {
   // achtergrond
 
   // vijand
+  
+  image (img, 0, -100,840,840);
+  image (img, 840, -100,840,840);
+
 
   // kogel
 
@@ -114,7 +125,14 @@ var checkGameOver = function() {
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
 /* ********************************************* */
-
+/*preload
+dezefunctie wordt 1x uitgevoerd voor setup
+we laden hier de plaatjes
+*/
+function preload () {
+  img= loadImage('weg.jpg')
+  
+}
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
