@@ -1,4 +1,6 @@
-b 
+ * {
+  background-color: darkgray;
+ }
 .p5Canvas {
   /* zorg dat canvas niet groter wordt dan window
      en behoud breedte x hoogte verhouding van 1280x720 

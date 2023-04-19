@@ -97,20 +97,18 @@ var tekenAlles = function() {
 
   // vijand
   
-  image (img, 0, -100,840,840);
-  image (img, 840, -100,840,840);
+  image (img1, 0, -100,840,840);
+  image (img1, 840, -100,840,840);
 
 
   // kogel
 
   // speler
-  fill("white");
-  ellipse(spelerX - 25, spelerY - 25, 50, 50);
-  fill("black");
-  ellipse(spelerX, spelerY, 10, 10);
+  image (img2,spelerX-50,spelerY-45,15d0,100);
 
   // punten en health
 
+ 
 };
 
 /**
@@ -130,8 +128,9 @@ dezefunctie wordt 1x uitgevoerd voor setup
 we laden hier de plaatjes
 */
 function preload () {
-  img= loadImage('weg.jpg')
-  
+  img1= loadImage('weg.jpg')
+  img2= loadImage('blauweauto.jpeg')
+  img3= loadImage('rodeauto.jpeg')
 }
 /**
  * setup
