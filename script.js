@@ -23,6 +23,7 @@ function setup () {
 /* ********************************************* */
 const SPELEN = 1;
 const GAMEOVER = 2;
+const UITLEG = 3;
 var spelStatus = SPELEN;
 
 const KEY_LEFT = 65;     //A
@@ -33,7 +34,9 @@ const KEY_RIGHT = 68;    //D
 var spelerX = 200        // x-positie van speler
 var spelerY = 360        // y-positie van speler
 
-var img; //plaatje
+var vijandX1 = 740;
+var vijandX1 = 500;
+var img;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -71,7 +74,11 @@ var beweegAlles = function () {
   
 
   // vijand
-
+vijandX1 = vijandX1 - 10; //beweging vijand nummer 1
+  if (vijandX1 && vijandX1 < 0) {
+    vijandX1= 1280
+    vijandY1= random(100,700);
+  }
   // kogel
 };
 
@@ -132,8 +139,16 @@ function preload () {
   img2= loadImage('blauweauto.jpeg')
   img3= loadImage('rodeauto.jpeg')
 }
+image (img3, vijandX1-110, vijdandY1-110, 220,220);
+ image (img3, vijandX2-110, vijandY2-110, 220,220);
+ 
+
 /**
  * setup
+ //vijand 
+ 
+
+ 
  * de code in deze functie wordt één keer uitgevoerd door
  * de p5 library, zodra het spel geladen is in de browser
  */
