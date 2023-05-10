@@ -104,7 +104,7 @@ var tekenAlles = function() {
   // kogel
 
   // speler
-  image (img2,spelerX-50,spelerY-45,15d0,100);
+  image (img2,spelerX-50,spelerY-45,150,100);
 
   // punten en health
 
