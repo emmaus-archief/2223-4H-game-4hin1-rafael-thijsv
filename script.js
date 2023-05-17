@@ -36,7 +36,7 @@ var spelerY = 360        // y-positie van speler
 
 var vijandX1 = 740;
 var vijandX1 = 500;
-var img;
+var img3;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -138,6 +138,7 @@ function preload () {
   img1= loadImage('weg.jpg')
   img2= loadImage('blauweauto.jpeg')
   img3= loadImage('rodeauto.jpeg')
+  img4= loadimage('rozeauto.jpeg')
 }
 image (img3, vijandX1-110, vijdandY1-110, 220,220);
  image (img3, vijandX2-110, vijandY2-110, 220,220);
