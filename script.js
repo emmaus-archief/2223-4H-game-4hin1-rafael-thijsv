@@ -34,8 +34,8 @@ const KEY_RIGHT = 68;    //D
 var spelerX = 200        // x-positie van speler
 var spelerY = 360        // y-positie van speler
 
-var vijandX1 = 740;
-var vijandX1 = 500;
+var vijandX1 = 240;
+var vijandX1 = 300;
 var img3;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -101,11 +101,13 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-
-  // vijand
-  
-  image (img1, 0, -100,840,840);
+image (img1, 0, -100,840,840);
   image (img1, 840, -100,840,840);
+  
+  // vijand
+  image (img3,1050,200,150,100);
+  image (img3,400,-100,400,100);
+  
 
 
   // kogel
