@@ -37,6 +37,7 @@ var spelerY = 360        // y-positie van speler
 var vijandX1 = 240;
 var vijandX1 = 300;
 var img3;
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -107,8 +108,8 @@ image (img1, 0, -100,840,840);
   // vijand
   image (img3,1050,200,150,100);
   image (img3,400,-100,400,100);
-  
 
+  
 
   // kogel
 
@@ -144,7 +145,10 @@ function preload () {
 }
 image (img3, vijandX1-110, vijdandY1-110, 220,220);
  image (img3, vijandX2-110, vijandY2-110, 220,220);
- 
+
+
+
+
 
 /**
  * setup
