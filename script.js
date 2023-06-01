@@ -34,8 +34,11 @@ const KEY_RIGHT = 68;    //D
 var spelerX = 200        // x-positie van speler
 var spelerY = 360        // y-positie van speler
 
-var vijandX1 = 240;
-var vijandX1 = 300;
+var vijandX1 = 740;     // x-positie van vijand 
+var vijandY1 = 500;      // y-positie van speler
+
+var vijandX2 = 1280;
+var vijandY2 = 500;
 var img3;
 
 /* ********************************************* */
@@ -75,10 +78,15 @@ var beweegAlles = function () {
   
 
   // vijand
-vijandX1 = vijandX1 - 10; //beweging vijand nummer 1
+  vijandX1 = vijandX1 - 10;  //bewegen vijand1
   if (vijandX1 && vijandX1 < 0) {
-    vijandX1= 1280
-    vijandY1= random(100,700);
+    vijandX1 = 1280
+    vijandY1 = random(100,700);
+  }
+  vijandX2 = vijandX2 - 10;  //bewegen vijand2
+  if (vijandX2 && vijandX2 < 0) {
+    vijandX2 = 1280
+    vijandY2 = random(100,700);
   }
   // kogel
 };
@@ -102,12 +110,12 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-image (img1, 0, -100,840,840);
+  image (img1, 0, -100, 840, 840);
   image (img1, 840, -100,840,840);
   
   // vijand
-  image (img3,1050,200,150,100);
-  image (img3,400,-100,400,100);
+  image (img3, vijandX1-110, vijandY1-110, 150, 100);
+  image (img3, vijandX2-110, vijandY2-110, 150, 100);
 
   
 
@@ -125,10 +133,24 @@ image (img1, 0, -100,840,840);
  * return true als het gameover is
  * anders return false
  */
-var checkGameOver = function() {
-  // check of HP 0 is , of tijd op is, of ...
+var checkGameOver = function () {
+  if (spelerX - vijandX1 < 100 &&
+    spelerX - vijandX1 >-100 &&
+    spelerY - vijandY1 < 100 &&
+    spelerY - vijandY1 > -100) {
+    console.log("Botsing")
+    return true;
+  }
+   if (spelerX - vijandX2 < 100 &&
+    spelerX - vijandX2 >-100 &&
+    spelerY - vijandY2 < 100 &&
+    spelerY - vijandY2 > -100) {
+    console.log("Botsing")
+    return true;
+  }
+  
   return false;
-};
+  };
 
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
