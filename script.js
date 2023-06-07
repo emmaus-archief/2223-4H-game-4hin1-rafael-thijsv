@@ -41,6 +41,9 @@ var vijandX2 = 1280;
 var vijandY2 = 500;
 var img3;
 
+var score = 0;  // score
+var highscore = 0;  // highscore
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -88,8 +91,39 @@ var beweegAlles = function () {
     vijandX2 = 1280
     vijandY2 = random(100,700);
   }
+
+    score = score + 1  //score
+  if (score > highscore) {  //highscore
+    highscore = score
+ }
+
+  if (score > 500) {  //vijand sneller bij 500
+     vijandX1 = vijandX1 - 2,5;
+     vijandX2 = vijandX2 - 2,5;
+   }
+   if (score > 1000) {  //vijand sneller bij 1000
+     vijandX1 = vijandX1 - 2,5;
+     vijandX2 = vijandX2 - 2,5;
+   }
+   if (score > 1500) {  //vijand sneller bij 1500
+     vijandX1 = vijandX1 - 2,5;
+     vijandX2 = vijandX2 - 2,5;
+   }
+   if (score > 2000) {  //vijand sneller bij 2000
+     vijandX1 = vijandX1 - 2,5;
+     vijandX2 = vijandX2 - 2,5;
+   }
+  if (score > 4000) {  //vijand sneller bij 4000
+     vijandX1 = vijandX1 - 2,5;
+     vijandX2 = vijandX2 - 2,5;
+   }
+  if (score > 6000) {  //vijand sneller bij 6000
+     vijandX1 = vijandX1 - 2,5;
+     vijandX2 = vijandX2 - 2,5;
+   }
+  };
   // kogel
-};
+
 
 /**
  * Checkt botsingen
@@ -124,10 +158,19 @@ var tekenAlles = function() {
   // speler
   image (img2,spelerX-50,spelerY-45,150,100);
 
-  // punten en health
+
+   // score
+  textSize(70)
+  fill("white")
+  text("score: " + score, 490, 100);
+  
+  textSize (50)
+  fill("white")
+  text("highscore: " + highscore, 880, 50 )
+  };
 
  
-};
+
 
 /**
  * return true als het gameover is
@@ -163,10 +206,10 @@ function preload () {
   img1= loadImage('weg.jpg')
   img2= loadImage('blauweauto.jpeg')
   img3= loadImage('rodeauto.jpeg')
-  img4= loadimage('rozeauto.jpeg')
+ 
 }
-image (img3, vijandX1-110, vijdandY1-110, 220,220);
- image (img3, vijandX2-110, vijandY2-110, 220,220);
+image (img3, vijandX1-110, vijdandY1-110, 150,100);
+ image (img3, vijandX2-110, vijandY2-110, 150,100);
 
 
 
