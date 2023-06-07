@@ -54,16 +54,16 @@ var highscore = 0;  // highscore
 var beweegAlles = function () { 
   // speler
  if (keyIsDown(KEY_LEFT)) {  //A
-     spelerX = spelerX -6;
+     spelerX = spelerX -8;
   }
   if (keyIsDown(KEY_UP)) {  //W
-     spelerY = spelerY -6;
+     spelerY = spelerY -8;
   }
    if (keyIsDown(KEY_DOWN)) {  //S
-     spelerY = spelerY +6;
+     spelerY = spelerY +8;
   }
    if (keyIsDown(KEY_RIGHT)) {  //D
-     spelerX = spelerX +6;
+     spelerX = spelerX +8;
   }
   
   if (spelerX < 50) {
@@ -81,12 +81,12 @@ var beweegAlles = function () {
   
 
   // vijand
-  vijandX1 = vijandX1 - 10;  //bewegen vijand1
+  vijandX1 = vijandX1 - 8;  //bewegen vijand1
   if (vijandX1 && vijandX1 < 0) {
     vijandX1 = 1280
     vijandY1 = random(100,700);
   }
-  vijandX2 = vijandX2 - 10;  //bewegen vijand2
+  vijandX2 = vijandX2 - 8;  //bewegen vijand2
   if (vijandX2 && vijandX2 < 0) {
     vijandX2 = 1280
     vijandY2 = random(100,700);
@@ -98,30 +98,35 @@ var beweegAlles = function () {
  }
 
   if (score > 500) {  //vijand sneller bij 500
-     vijandX1 = vijandX1 - 2,5;
-     vijandX2 = vijandX2 - 2,5;
+     vijandX1 = vijandX1 - 2;
+     vijandX2 = vijandX2 - 2;
    }
    if (score > 1000) {  //vijand sneller bij 1000
-     vijandX1 = vijandX1 - 2,5;
-     vijandX2 = vijandX2 - 2,5;
+     vijandX1 = vijandX1 - 2;
+     vijandX2 = vijandX2 - 2;
    }
-   if (score > 1500) {  //vijand sneller bij 1500
-     vijandX1 = vijandX1 - 2,5;
-     vijandX2 = vijandX2 - 2,5;
+   if (score > 1750) {  //vijand sneller bij 1750
+     vijandX1 = vijandX1 - 2;
+     vijandX2 = vijandX2 - 2;
    }
-   if (score > 2000) {  //vijand sneller bij 2000
-     vijandX1 = vijandX1 - 2,5;
-     vijandX2 = vijandX2 - 2,5;
+   if (score > 2500) {  //vijand sneller bij 2500
+     vijandX1 = vijandX1 - 2;
+     vijandX2 = vijandX2 - 2;
    }
   if (score > 4000) {  //vijand sneller bij 4000
-     vijandX1 = vijandX1 - 2,5;
-     vijandX2 = vijandX2 - 2,5;
+     vijandX1 = vijandX1 - 2;
+     vijandX2 = vijandX2 - 2;
    }
-  if (score > 6000) {  //vijand sneller bij 6000
-     vijandX1 = vijandX1 - 2,5;
-     vijandX2 = vijandX2 - 2,5;
+  if (score > 5000) {  //vijand sneller bij 5000
+     vijandX1 = vijandX1 - 2;
+     vijandX2 = vijandX2 - 2;
    }
-  };
+ 
+  if (score > 7000) {  //vijand sneller bij 7000
+     vijandX1 = vijandX1 - 2;
+     vijandX2 = vijandX2 - 2;
+   }
+};
   // kogel
 
 
@@ -215,15 +220,10 @@ image (img3, vijandX1-110, vijdandY1-110, 150,100);
 
 
 
-/**
- * setup
- //vijand 
- 
+
 
  
- * de code in deze functie wordt één keer uitgevoerd door
- * de p5 library, zodra het spel geladen is in de browser
- */
+
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
