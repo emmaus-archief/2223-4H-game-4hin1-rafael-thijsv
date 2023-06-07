@@ -165,13 +165,13 @@ var tekenAlles = function() {
 
 
    // score
-  textSize(70)
+  textSize(50)
   fill("white")
-  text("score: " + score, 490, 100);
+  text("score: " + score, 10, 50);
   
   textSize (50)
   fill("white")
-  text("highscore: " + highscore, 880, 50 )
+  text("highscore: " + highscore, 900, 50 )
   };
 
  
