@@ -178,16 +178,16 @@ var tekenAlles = function() {
  */
 var checkGameOver = function () {
   if (spelerX - vijandX1 < 100 &&
-    spelerX - vijandX1 >-100 &&
-    spelerY - vijandY1 < 100 &&
-    spelerY - vijandY1 > -100) {
+    spelerX - vijandX1 >-212 &&
+    spelerY - vijandY1 < 25 &&
+    spelerY - vijandY1 > -170) {
     console.log("Botsing")
     return true;
   }
    if (spelerX - vijandX2 < 100 &&
-    spelerX - vijandX2 >-100 &&
-    spelerY - vijandY2 < 100 &&
-    spelerY - vijandY2 > -100) {
+    spelerX - vijandX2 >-212 &&
+    spelerY - vijandY2 < 25 &&
+    spelerY - vijandY2 > -170) {
     console.log("Botsing")
     return true;
   }
