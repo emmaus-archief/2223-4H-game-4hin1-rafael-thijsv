@@ -214,7 +214,7 @@ function preload () {
  
 }
 image (img3, vijandX1-110, vijdandY1-110, 150,100);
- image (img3, vijandX2-110, vijandY2-110, 150,100);
+image (img3, vijandX2-110, vijandY2-110, 150,100);
 
 
 
@@ -248,6 +248,45 @@ function draw() {
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
+    console.log("game over");
+    textSize(70);
+    fill("black")
+    text("GAME OVER", 400, 250)
+    textSize(40);
+    fill("white")
+    text("Press Enter", 500, 350)
 
+    if (keyIsDown(13)) {
+      spelerX = 200;
+      spelerY = 500;
+      vijandX1 = 740;
+      vijandX2 = 1280;
+      vijandY1 = 200;
+      vijandY2 = 1080;
+      spelStatus = SPELEN;
+      score = 0;
+    }
   }
+  if (spelStatus === UITLEG) {
+    // uitleg scherm
+    console.log("uitleg");
+    textSize(100);
+    fill("white")
+    text("Uitleg", 350, 180)
+    textSize(60);
+    fill("white")
+    text(50);
+    text(" Gebruik A, S, W, D om te bewegen", 500, 380)
+    text("Druk spatie om te beginnen", 410, 590)
+    if (keyIsDown(32)) {
+      spelerX = 200;
+      spelerY = 500;
+      vijandX1 = 740;
+      vijandX2 = 1280; 
+      vijandY1 = 200;
+      vijandY2 = 1080;
+      spelStatus = SPELEN;
+      score = 0 
+    }
+  } 
 }
